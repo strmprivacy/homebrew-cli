@@ -5,28 +5,28 @@
 class Strm < Formula
   desc "Command Line Interface for https://streammachine.io"
   homepage "https://streammachine.io"
-  version "1.2.1"
+  version "1.3.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/streammachineio/cli/releases/download/v1.2.1/strm_darwin_amd64.tar.gz"
-      sha256 "00169d92998cbee141225fb88c39429476e30dce2fa21b1d843d5005aa5b8b3c"
+      url "https://github.com/streammachineio/cli/releases/download/v1.3.0/strm_darwin_amd64.tar.gz"
+      sha256 "2f4516f391c59610e9702bb9ecea81d89ebcbedff176142ee518037ef1018a3b"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/streammachineio/cli/releases/download/v1.2.1/strm_darwin_arm64.tar.gz"
-      sha256 "f6504b9deb3dd19da7e73732d4a23b4e4c16fc60d6bc3e4f3b87af4e13eb18e2"
+      url "https://github.com/streammachineio/cli/releases/download/v1.3.0/strm_darwin_arm64.tar.gz"
+      sha256 "98cc96ec2dbf283f34adee6505900cb660b8171c04e3d896fb249d63d70ee918"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/streammachineio/cli/releases/download/v1.2.1/strm_linux_amd64.tar.gz"
-      sha256 "307a6279f4f5057424e8fe89623b3708140f612fc879baa5040cd09e6bd4ef7f"
+      url "https://github.com/streammachineio/cli/releases/download/v1.3.0/strm_linux_amd64.tar.gz"
+      sha256 "bb42e9dad0e58ca83b62368f15cbf80322ae53b9f0563f05ce86ea132ddb62f2"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streammachineio/cli/releases/download/v1.2.1/strm_linux_arm64.tar.gz"
-      sha256 "13c7d5db301b7f35cb7201398c88e424f4da86f06e62977b09597fc2ec325d93"
+      url "https://github.com/streammachineio/cli/releases/download/v1.3.0/strm_linux_arm64.tar.gz"
+      sha256 "4a176902af21e4554c9fe2d6f779715fc449b6ebf7b9eacc7e1c27381894a86d"
     end
   end
 
