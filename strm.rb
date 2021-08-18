@@ -5,28 +5,28 @@
 class Strm < Formula
   desc "Command Line Interface for https://streammachine.io"
   homepage "https://streammachine.io"
-  version "1.5.0"
+  version "1.6.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/streammachineio/cli/releases/download/v1.5.0/strm_darwin_amd64.tar.gz"
-      sha256 "21c03320931fee3b900830b746c17891a8f7590f482c876f979b281393424975"
+      url "https://github.com/streammachineio/cli/releases/download/v1.6.0/strm_darwin_amd64.tar.gz"
+      sha256 "57b71200bd5fa47bdcccb55be6c23952479edba3bc74bce942b3b2da53a9a018"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/streammachineio/cli/releases/download/v1.5.0/strm_darwin_arm64.tar.gz"
-      sha256 "a27f7707bd25ca13582aef20d2b05e5f72e893be186efd212f90d81c6ca6a170"
+      url "https://github.com/streammachineio/cli/releases/download/v1.6.0/strm_darwin_arm64.tar.gz"
+      sha256 "95137672b86046ad54292d39669424b6d783aedda93caf5dc2f6cce00b180c82"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/streammachineio/cli/releases/download/v1.5.0/strm_linux_amd64.tar.gz"
-      sha256 "81927f3e5f00809604cd7a1804a5af6c0c6e62bf821dc872bee2bcfdede0cc72"
+      url "https://github.com/streammachineio/cli/releases/download/v1.6.0/strm_linux_amd64.tar.gz"
+      sha256 "1b3aeacc0e9dedccbe65b0a2361b2b29a6f805edee446896a4ddcb037230d616"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streammachineio/cli/releases/download/v1.5.0/strm_linux_arm64.tar.gz"
-      sha256 "9bee5fd9014ec1cc9cf3ba7e8a13a8e44d3c6c5663579e71c8236526d8802dae"
+      url "https://github.com/streammachineio/cli/releases/download/v1.6.0/strm_linux_arm64.tar.gz"
+      sha256 "5de5c8fae05d2c2fb0530416d1e33d5ac70f47871f19aeb30dbef49715d33c3f"
     end
   end
 
@@ -50,7 +50,7 @@ class Strm < Formula
          /bin/zsh -c 'strm completion zsh > "${fpath[1]}/_strm"'
 
      for fish users
-       source "strm/path.fish.inc"
+       strm completion fish > ~/.config/fish/completions/strm.fish # or $XDG_CONFIG_HOME instead of ~/.config
   EOS
   end
 
