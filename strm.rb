@@ -5,33 +5,44 @@
 class Strm < Formula
   desc "Command Line Interface for https://streammachine.io"
   homepage "https://streammachine.io"
-  version "1.10.0"
-  bottle :unneeded
+  version "1.10.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/streammachineio/cli/releases/download/v1.10.0/strm_darwin_arm64.tar.gz"
-      sha256 "36d8895d2341370f5a3b0e1b090e9fe28f44098c88c5fd1424f8f76b71a6a371"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/streammachineio/cli/releases/download/v1.10.0/strm_darwin_amd64.tar.gz"
-      sha256 "e84461a32cbf6d522890f667d6074bc76dacc21bf741c6152c716786a70a9f56"
+      url "https://github.com/streammachineio/cli/releases/download/v1.10.1/strm_darwin_amd64.tar.gz"
+      sha256 "e993dacf309dd2a576e2829d44982fd69115ed556113da3d2b0008b25f57f17a"
+
+      def install
+        bin.install "strm"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/streammachineio/cli/releases/download/v1.10.1/strm_darwin_arm64.tar.gz"
+      sha256 "18248d18d29da6b5ea93b9dc196df04cd4f8256cbaa4936daaf36905b7868cb8"
+
+      def install
+        bin.install "strm"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streammachineio/cli/releases/download/v1.10.0/strm_linux_arm64.tar.gz"
-      sha256 "d6cb6b562218a977cc0405ff636821f0e4493dc5a53b23a3e1cd53bf3e5ca6f0"
+      url "https://github.com/streammachineio/cli/releases/download/v1.10.1/strm_linux_arm64.tar.gz"
+      sha256 "f49d0308b4dbf89a2f3abb4e81db6641d70b58e1e4edf934a9526bf99133cdeb"
+
+      def install
+        bin.install "strm"
+      end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streammachineio/cli/releases/download/v1.10.0/strm_linux_amd64.tar.gz"
-      sha256 "ec4f3e3cfadbb7066d2e3f70b77c51650a254662e8d855575a50f042cc78201e"
-    end
-  end
+      url "https://github.com/streammachineio/cli/releases/download/v1.10.1/strm_linux_amd64.tar.gz"
+      sha256 "a19a300f7a986f08d5d910dbb3b57daf19a18f2dfcaf8f93d2cdf55d2af08c39"
 
-  def install
-    bin.install "strm"
+      def install
+        bin.install "strm"
+      end
+    end
   end
 
   def caveats; <<~EOS
