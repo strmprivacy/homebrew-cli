@@ -5,20 +5,20 @@
 class Strm < Formula
   desc "Command Line Interface for https://strmprivacy.io"
   homepage "https://strmprivacy.io"
-  version "1.21.1"
+  version "1.21.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/strmprivacy/cli/releases/download/v1.21.1/strm_darwin_amd64.tar.gz"
-      sha256 "8840fb7806848198954def378e57b36fa353047818799a49d877452ae2a6bba1"
+    if Hardware::CPU.arm?
+      url "https://github.com/strmprivacy/cli/releases/download/v1.21.2/strm_darwin_arm64.tar.gz"
+      sha256 "d387c36df5d7df244cf4023ccad9fc5523d95b6daee6caf9249ec16600f1e779"
 
       def install
         bin.install "strm"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/strmprivacy/cli/releases/download/v1.21.1/strm_darwin_arm64.tar.gz"
-      sha256 "ff3ee41bdb7da721e4566101e7a410eddf49f17bf48f13b05bac6f2fc04a149c"
+    if Hardware::CPU.intel?
+      url "https://github.com/strmprivacy/cli/releases/download/v1.21.2/strm_darwin_amd64.tar.gz"
+      sha256 "544a6c2997644d598ef808c233f58a43160c150d8b56c5c528e19b320631630b"
 
       def install
         bin.install "strm"
@@ -27,17 +27,17 @@ class Strm < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/strmprivacy/cli/releases/download/v1.21.1/strm_linux_amd64.tar.gz"
-      sha256 "3f5c10ed00d1639bea6ffd5f043604962522ce3a2082236f08651bd9229f24eb"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/strmprivacy/cli/releases/download/v1.21.2/strm_linux_arm64.tar.gz"
+      sha256 "4934519dc7c320dada5d4a811beb772e01c3c54b3cd0c9067c6884cff7ad07b9"
 
       def install
         bin.install "strm"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/strmprivacy/cli/releases/download/v1.21.1/strm_linux_arm64.tar.gz"
-      sha256 "a20a3daa743d91cba630972cd6826c7f2eb1866aa2f73ddd118a0bc34ee5f551"
+    if Hardware::CPU.intel?
+      url "https://github.com/strmprivacy/cli/releases/download/v1.21.2/strm_linux_amd64.tar.gz"
+      sha256 "0ff0b5df4d4bae2171b03f80c0e402bc45c43677e2dc67fd5b6a9554ec337a51"
 
       def install
         bin.install "strm"
