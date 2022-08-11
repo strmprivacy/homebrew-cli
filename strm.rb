@@ -5,20 +5,20 @@
 class Strm < Formula
   desc "Command Line Interface for https://strmprivacy.io"
   homepage "https://strmprivacy.io"
-  version "2.7.0"
+  version "2.8.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/strmprivacy/cli/releases/download/v2.7.0/strm_darwin_amd64.tar.gz"
-      sha256 "920465ba4831edbcd39c98a3320a5016650a914d5b1c48bfd44e10a07f09ae46"
+      url "https://github.com/strmprivacy/cli/releases/download/v2.8.0/strm_darwin_amd64.tar.gz"
+      sha256 "5422abfde5e76f91b4725de9bd682ca6f7b858f7022bce42055113d4c5631161"
 
       def install
         bin.install "strm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/strmprivacy/cli/releases/download/v2.7.0/strm_darwin_arm64.tar.gz"
-      sha256 "716a38ac5022a4db52804221454e6a6ababe824cfa6435e471631d3187e9b0e6"
+      url "https://github.com/strmprivacy/cli/releases/download/v2.8.0/strm_darwin_arm64.tar.gz"
+      sha256 "5f3d9a346459a4822e66e0742cdd242cd019a0990857d1440d632907f418b6f9"
 
       def install
         bin.install "strm"
@@ -28,16 +28,16 @@ class Strm < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/strmprivacy/cli/releases/download/v2.7.0/strm_linux_amd64.tar.gz"
-      sha256 "55aefac38b803116c842c8868b82de26aca361e3d02de0c426f125dab6a9ab0b"
+      url "https://github.com/strmprivacy/cli/releases/download/v2.8.0/strm_linux_amd64.tar.gz"
+      sha256 "bbfcdfa5ef59fc54b0b32253d670b3faa1870b073cdff9fd94e0ebc65819eddb"
 
       def install
         bin.install "strm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/strmprivacy/cli/releases/download/v2.7.0/strm_linux_arm64.tar.gz"
-      sha256 "ba742823481b778c68db7624bf629a87692e121358b952ee1278cb81525322a5"
+      url "https://github.com/strmprivacy/cli/releases/download/v2.8.0/strm_linux_arm64.tar.gz"
+      sha256 "b53552912d55dc0a29f42e7aee5084772abbeaae443445ede4a3fe3342a0e598"
 
       def install
         bin.install "strm"
