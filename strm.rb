@@ -5,20 +5,20 @@
 class Strm < Formula
   desc "Command Line Interface for https://strmprivacy.io"
   homepage "https://strmprivacy.io"
-  version "2.19.0"
+  version "3.0.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/strmprivacy/cli/releases/download/v2.19.0/strm_darwin_amd64.tar.gz"
-      sha256 "c9550f29bd7740889773fa720f79b65489908f0decfefec6e5b7506f89f3ac86"
+      url "https://github.com/strmprivacy/cli/releases/download/v3.0.0/strm_darwin_amd64.tar.gz"
+      sha256 "737ce75298a51fc098ed8c509b64574550d0cbd8a7c8bbf45c50607c22da7218"
 
       def install
         bin.install "strm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/strmprivacy/cli/releases/download/v2.19.0/strm_darwin_arm64.tar.gz"
-      sha256 "7dbb6849c5f77bf066e947b61dd44e1d30902e621822e5388da6053540d529d0"
+      url "https://github.com/strmprivacy/cli/releases/download/v3.0.0/strm_darwin_arm64.tar.gz"
+      sha256 "06515ae22824143dde26293fb2f74180abd66514c001d5f81bc0ee5c92054fbc"
 
       def install
         bin.install "strm"
@@ -28,16 +28,16 @@ class Strm < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/strmprivacy/cli/releases/download/v2.19.0/strm_linux_arm64.tar.gz"
-      sha256 "e2470b4a9a08a92a521bdd62bb8915da65b56ea2239f07a168729500885157b9"
+      url "https://github.com/strmprivacy/cli/releases/download/v3.0.0/strm_linux_arm64.tar.gz"
+      sha256 "d91721ee1381472164be872bb0c7008c1027c66f84dc2a08c0776ec7c3be0947"
 
       def install
         bin.install "strm"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/strmprivacy/cli/releases/download/v2.19.0/strm_linux_amd64.tar.gz"
-      sha256 "b7b8070d96ea0654b8c7b756e2a4cba3131fd276ac7eb606b52da454638ca11c"
+      url "https://github.com/strmprivacy/cli/releases/download/v3.0.0/strm_linux_amd64.tar.gz"
+      sha256 "bbf65677c89af4f79524a11c2865b73c9402e0965c90f2281062b5d7a7ed056b"
 
       def install
         bin.install "strm"
