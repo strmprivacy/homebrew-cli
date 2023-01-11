@@ -5,20 +5,20 @@
 class Strm < Formula
   desc "Command Line Interface for https://strmprivacy.io"
   homepage "https://strmprivacy.io"
-  version "3.7.0"
+  version "3.7.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/strmprivacy/cli/releases/download/v3.7.0/strm_darwin_amd64.tar.gz"
-      sha256 "2bad935e306279128ffa07e3ed3c39cfd11c1e064d99de1e397bf94fd846c30a"
+      url "https://github.com/strmprivacy/cli/releases/download/v3.7.1/strm_darwin_amd64.tar.gz"
+      sha256 "ab902d72ff5672d866bb78b95e3ba6c4309df57eff7091d306468374732543ca"
 
       def install
         bin.install "strm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/strmprivacy/cli/releases/download/v3.7.0/strm_darwin_arm64.tar.gz"
-      sha256 "b01ed89521224c85488b6a87891d398d1c360c5e4d9b9c90fef3c902fd88402b"
+      url "https://github.com/strmprivacy/cli/releases/download/v3.7.1/strm_darwin_arm64.tar.gz"
+      sha256 "7b1050b58a696f8ba92639656ffcbbfcf0a9d50923b182e8584fbaa3c2ff9e0e"
 
       def install
         bin.install "strm"
@@ -27,17 +27,17 @@ class Strm < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/strmprivacy/cli/releases/download/v3.7.0/strm_linux_amd64.tar.gz"
-      sha256 "e0e83ac0c287629ed352cf71e60ce6beac725e6684582288382c7be4196d8554"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/strmprivacy/cli/releases/download/v3.7.1/strm_linux_arm64.tar.gz"
+      sha256 "6546c05401948aa77adcf63a19a9f86992b3db458551da14694dd2533697594a"
 
       def install
         bin.install "strm"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/strmprivacy/cli/releases/download/v3.7.0/strm_linux_arm64.tar.gz"
-      sha256 "28c6acaaa4d596abcb1057d532f9cc0ce32921019b16d4a4b7b01179dd65a303"
+    if Hardware::CPU.intel?
+      url "https://github.com/strmprivacy/cli/releases/download/v3.7.1/strm_linux_amd64.tar.gz"
+      sha256 "f7da76edf8e27561d171b5764d344be6f60a62a2aeac7de410a25fed1cde668b"
 
       def install
         bin.install "strm"
@@ -59,7 +59,7 @@ class Strm < Formula
 
        for zsh users
          ensure that shell completion is enabled, then run (only needs to be done once):
-           /bin/zsh -c 'strm completion zsh > "${fpath[1]}/_strm"'
+           strm completion zsh > "${fpath[1]}/_strm"
 
        for fish users
          strm completion fish > ~/.config/fish/completions/strm.fish # or $XDG_CONFIG_HOME instead of ~/.config
