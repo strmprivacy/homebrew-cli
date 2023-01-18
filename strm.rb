@@ -5,20 +5,20 @@
 class Strm < Formula
   desc "Command Line Interface for https://strmprivacy.io"
   homepage "https://strmprivacy.io"
-  version "3.9.0"
+  version "3.10.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/strmprivacy/cli/releases/download/v3.9.0/strm_darwin_amd64.tar.gz"
-      sha256 "66410947a1b8bf1cb124b7243dfee6b093d6f940d15737aec50e91d45bf29801"
+      url "https://github.com/strmprivacy/cli/releases/download/v3.10.0/strm_darwin_amd64.tar.gz"
+      sha256 "e9c1de49ac2f166a1b860bd50148459f5c15df0965369cf0b02d9728f5aeb1b8"
 
       def install
         bin.install "strm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/strmprivacy/cli/releases/download/v3.9.0/strm_darwin_arm64.tar.gz"
-      sha256 "84423190bfcc64230dff9cd3298cf82e59eebb92c3d1b53ff3db908753b86874"
+      url "https://github.com/strmprivacy/cli/releases/download/v3.10.0/strm_darwin_arm64.tar.gz"
+      sha256 "9afe5a10a3f52885ed671acf3ed074fd4a8d223a42733d0dfd56c73eedb3bc43"
 
       def install
         bin.install "strm"
@@ -27,17 +27,17 @@ class Strm < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/strmprivacy/cli/releases/download/v3.9.0/strm_linux_amd64.tar.gz"
-      sha256 "62c1abd6496314d53e12720eb1035fcd54722fafec1c3c5ff41772f6fabac3d8"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/strmprivacy/cli/releases/download/v3.10.0/strm_linux_arm64.tar.gz"
+      sha256 "6fd684a1aa4acb53be503486205debfdaac633c7bf2ad4048d479edf4c85cc83"
 
       def install
         bin.install "strm"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/strmprivacy/cli/releases/download/v3.9.0/strm_linux_arm64.tar.gz"
-      sha256 "85f6ff127460bf7c4d0b519fa9e5c4a3f04d4b9f2f68d1a14c4085630b72b137"
+    if Hardware::CPU.intel?
+      url "https://github.com/strmprivacy/cli/releases/download/v3.10.0/strm_linux_amd64.tar.gz"
+      sha256 "30a281ccac6f8dc162a7369e4819fc1c344d2e0b5c603333e56179f2ebd4c1ea"
 
       def install
         bin.install "strm"
