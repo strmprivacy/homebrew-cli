@@ -5,20 +5,20 @@
 class Strm < Formula
   desc "Command Line Interface for https://strmprivacy.io"
   homepage "https://strmprivacy.io"
-  version "3.12.0"
+  version "3.13.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/strmprivacy/cli/releases/download/v3.12.0/strm_darwin_amd64.tar.gz"
-      sha256 "74ccbdb681e3c3eb4d8c3d9caa9122d19b06eb7c8a3cd0b1e5f64187be5a630a"
+      url "https://github.com/strmprivacy/cli/releases/download/v3.13.0/strm_darwin_amd64.tar.gz"
+      sha256 "50ee6862354c8d4c7faff6b691754897f20fff47fd31502624ebff5738d52200"
 
       def install
         bin.install "strm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/strmprivacy/cli/releases/download/v3.12.0/strm_darwin_arm64.tar.gz"
-      sha256 "f887e434006600ea2d3abc0d8e9d79160cc60f5a96301d8e5256b39b20553fa3"
+      url "https://github.com/strmprivacy/cli/releases/download/v3.13.0/strm_darwin_arm64.tar.gz"
+      sha256 "7007c1509e637e7d28d1a812867050bbf228f37c26a206761345f043b583c837"
 
       def install
         bin.install "strm"
@@ -28,16 +28,16 @@ class Strm < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/strmprivacy/cli/releases/download/v3.12.0/strm_linux_amd64.tar.gz"
-      sha256 "eed6a4e76015a1fabdf52cef4abd27ff571e35abb13ffd437955265026a154bc"
+      url "https://github.com/strmprivacy/cli/releases/download/v3.13.0/strm_linux_amd64.tar.gz"
+      sha256 "9820aca2bbdff66403dd6a1bd68066acdf79270d436980c7d2636619717230d3"
 
       def install
         bin.install "strm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/strmprivacy/cli/releases/download/v3.12.0/strm_linux_arm64.tar.gz"
-      sha256 "976da2eb1a4245a332f549f6bbd082be7ad4f934e0fe603a3091365390925f04"
+      url "https://github.com/strmprivacy/cli/releases/download/v3.13.0/strm_linux_arm64.tar.gz"
+      sha256 "a04fe10f1920668e13b7fd376c1f36fc09e1e42f8ef9b848c109b837f455b98c"
 
       def install
         bin.install "strm"
